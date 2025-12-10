@@ -75,17 +75,30 @@
 <body>
 
 <header>
-    <h1>Lyapunov-Based Stability Analysis and Learning</h1>
-    <p>Final Project — EECS 560 • Winter 2025</p>
+    <h1>Stability-Constrained Inverse Modeling for ParameterIdentification in Dynamical Systems via Neural Surrogates</h1>
+    <p>Final Project — CSE 598-002 - AI for Science • Fall 2025</p>
+    <p><strong>Author: Daniel Menacho</strong> — 
+       <a href="mailto:daniel@umich.edu" style="color:white; text-decoration:underline;">
+          daniel@umich.edu
+       </a>
+    </p>
 </header>
 
 <section>
     <h2>Project Summary</h2>
     <p>
-        This project explores Lyapunov-based methods for enforcing stability in modern
-        learning and control systems. We propose a framework that integrates Lyapunov
-        constraints directly into the training objective and evaluate it on nonlinear systems.
+        we propose a stability-constrained inverse modeling framework that integrates neural surrogate models with Lyapunov-based stability constraints.
+        Unlike existing approaches that either certify stability for given parameters (forward problem) or learn surrogates without stability guarantees, 
+        our method formulates parameter identification as an optimization problem where candidate solutions must simultaneously match desired outputs and satisfy learned Lyapunov conditions.
     </p>
+    <p>
+        Our key contributions include:
+    </p>
+    <ul>
+        <li>We propose an inverse modeling framework constrained by a learnable Lyapunov function to identify parameter sets that induce stability.</li>
+        <li>We introduce a generalizable framework adaptable to a wide range of neural surrogate models.</li>
+        <li>We validate the reliability of the proposed approach through a proof-of-concept toy-physics experiment, demonstrating its scalability to decision-making tasks for selecting stable parameters during model training.</li>
+    </ul>
 </section>
 
 </body>    
