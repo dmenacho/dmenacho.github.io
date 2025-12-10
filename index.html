@@ -63,6 +63,13 @@
         .links a:hover {
             background: #0055aa;
         }
+        .img-caption {
+            text-align: center;
+            font-size: 12px; 
+            color: #555;
+            margin-top: 6px;
+            font-style: italic;
+        }
         footer {
             text-align: center;
             padding: 15px;
@@ -77,7 +84,7 @@
 <header>
     <h1>Stability-Constrained Inverse Modeling for ParameterIdentification in Dynamical Systems via Neural Surrogates</h1>
     <p>Final Project — CSE 598-002 - AI for Science • Fall 2025</p>
-    <img src="docs/daniel_profile.jpeg" alt="Author Portrait" class="header-img" style="width:40%; display:block; margin:0 auto;">
+    <img src="docs/daniel_profile.jpeg" alt="Author Portrait" class="header-img" style="width:10%; display:block; margin:0 auto;">
     <p><strong>Author: Daniel Menacho</strong> — 
        <a href="mailto:daniel@umich.edu" style="color:white; text-decoration:underline;">
           dmenordo@umich.edu
@@ -102,8 +109,9 @@
     </ul>
 </section>
 <section>
-    <img src="docs/pipeline_lyap.png" alt="Pipeline plot"style="width:40%; display:block; margin:0 auto;">
-            <p class="img-caption">Figure 2. Simulator of Double 2D Spring from MyPhysicLab and Stable/Unstable sample from our dataset.</p>
+    <img src="docs/pipeline_lyap.png" alt="Pipeline plot"style="width:80%; display:block; margin:0 auto;">
+            <p class="img-caption">Figure 1. The pipeline consists of two stages: (1) a pre-training stage, where the Lyapunov-based PINN learns stability characteristics and the Neural Surrogate Model captures the system dynamics,
+                and (2) an inverse modeling stage that uses both pretrained components to compute the loss and identify admissible stable parameters.</p>
 </section>    
 <section>
     <h2>Dataset and Results</h2>
@@ -133,10 +141,10 @@
                 when searching for stability.
             </p>
 
-            <img src="docs/inverse_eval_1_detail.png" alt="Results Plot" style="width:20%; display:block; margin:0 auto;">
+            <img src="docs/inverse_eval_1_detail.png" alt="Results Plot" style="width:50%; display:block; margin:0 auto;">
             <p class="img-caption">
-                Figure 4. Parameter distribution for stable trajectories. Purple and blue 
-                experiments correspond to different initial conditions.
+                Figure 4.  Parameter distribution for reaching stable trajectories. The purple and blue experiments use the initial conditions [0.5, 1.0, -0.5, -4.0] 
+                and [0.25, 0.5, -0.2, -1.0], respectively. The first two rows correspond to the total optimization loss in the inverse model, while the remaining rows use only the data loss.
             </p>
         </div>
 
