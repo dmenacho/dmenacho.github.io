@@ -77,7 +77,7 @@
 <header>
     <h1>Stability-Constrained Inverse Modeling for ParameterIdentification in Dynamical Systems via Neural Surrogates</h1>
     <p>Final Project — CSE 598-002 - AI for Science • Fall 2025</p>
-    <img src="daniel_profile.jpeg" alt="Author Portrait" class="header-img">
+    <img src="docs/daniel_profile.jpeg" alt="Author Portrait" class="header-img">
     <p><strong>Author: Daniel Menacho</strong> — 
        <a href="mailto:daniel@umich.edu" style="color:white; text-decoration:underline;">
           dmenordo@umich.edu
@@ -102,7 +102,7 @@
     </ul>
 </section>
 <section>
-    <img src="pipeline_lyap.png" alt="Pipeline plot">
+    <img src="docs/pipeline_lyap.png" alt="Pipeline plot">
             <p class="img-caption">Figure 2. Simulator of Double 2D Spring from MyPhysicLab and Stable/Unstable sample from our dataset.</p>
 </section>    
 <section>
@@ -113,22 +113,31 @@
         <div class="split-box">
             <h3>Dataset</h3>
             <p>
-                The dataset contains 50,000 trajectories sampled every 0.1 seconds over a 15-second horizon, computed using SciPy’s Runge–Kutta ODE solver. 
+                The dataset contains 50,000 trajectories sampled every 0.1 seconds over a 
+                15-second horizon, computed using SciPy’s Runge–Kutta ODE solver.
             </p>
 
-            <img src="dataset_lyap.png" alt="Dataset plot">
-            <p class="img-caption">Figure 2. Simulator of Double 2D Spring from MyPhysicLab and Stable/Unstable sample from our dataset.</p>
+            <img src="docs/dataset.png" alt="Dataset Plot">
+            <p class="img-caption">
+                Figure 2. Simulator of Double 2D Spring from MyPhysicsLab and 
+                stable/unstable samples from our dataset.
+            </p>
         </div>
 
         <div class="split-box">
             <h3>Results</h3>
             <p>
-                Observing the frequency plot of the admissible parameters, we notice a clear tendency to avoid negative values, which confirms that the model understands the
-                physical meaning of the system and naturally excludes negative values when searching for stability 
+                Observing the frequency plot of the admissible parameters, we notice a 
+                tendency to avoid negative values, confirming that the model understands 
+                the physical meaning of the system and naturally excludes negative values 
+                when searching for stability.
             </p>
 
-            <img src="inverse_eval_1_detail.png" alt="Results Plot">
-            <p class="img-caption">Figure 4.  Parameter distribution for reaching stable trajectories. The purple and blue experiments use the initial conditions [0.5, 1.0, -0.5, -0.4] and [0.25, 0.5, -0.2, -1.0], respectively. The first two rows correspond to the total optimization loss in the inverse model, while the remaining rows use only the data loss.</p>
+            <img src="docs/results.png" alt="Results Plot">
+            <p class="img-caption">
+                Figure 4. Parameter distribution for stable trajectories. Purple and blue 
+                experiments correspond to different initial conditions.
+            </p>
         </div>
 
     </div>
